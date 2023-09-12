@@ -1,0 +1,256 @@
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+:root{
+    --cor01: #FF4666;
+    --cor02: #292929;
+}
+
+body{
+    background-color: black;
+}
+header{
+    background-color:var(--cor02);
+
+    color: var(--cor01);
+    text-align: center;
+}
+main{
+    width: 80vw;
+
+    margin: auto;
+}
+main >p {
+    margin: 20px;
+    text-align: center;
+    color: white;
+}
+/*-------------------------------------Resultado da Roleta-----------------------------------------------*/
+section#resultado{
+    display: none;
+    margin: auto;
+    height: 376px;
+    width: 346px;
+    
+    background-color: var(--cor02);
+
+    border: 2px solid #FF4666;
+    border-radius: 10px;
+
+    box-shadow: 0px 0px 50px rgba(255, 0, 0, 0.664);
+}
+section#resultado > div#img_r{
+    margin: auto;
+    margin-top: 55px;
+
+    width: 203px;
+    height: 218px;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    border: 2px solid #FF4666;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 5px #242424b0;
+}
+section#resultado > div#text_r{
+    margin: auto;
+    margin-top: 20px;
+
+    text-align: center;
+    font-size: 2em;
+    font-weight: bolder;
+
+    color: white;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.589);
+    
+}
+/*-------------------------------------------Roleta------------------------------------------------------*/
+section#random{
+    position: relative;
+
+    width: 200px;
+    height: 250px;
+    background-color: var(--cor02);
+
+    margin: 30px auto;
+
+    box-shadow: 0px 0px 10px #ff46659f;
+    border: 2px solid #FF4666;
+
+    overflow: hidden;
+
+    animation: none;
+}
+section#random > div#seta_baixo{
+    position: absolute;
+    display: none;
+    background-color: white;
+
+    top: 0px;
+    left: 0px;
+
+    height: 25px;
+    width: 300px;
+
+    animation: none;
+}
+section#random > div#seta_cima{
+    position: absolute;
+    display: none;
+    background-color: white;
+
+    bottom: 0px;
+    left: 0px;
+
+    height: 25px;
+    width: 300px;
+
+    animation: none;
+}
+section#random > div#imginicial{
+    display: block;
+    position: absolute;
+    top: 4px ;
+    left: 4px;
+    background-color: lightgrey;
+    height: 121px;                     /*Total de 242*/
+    width: 192px ;
+    
+}
+section#random > div#imginicial2{
+    display: block;
+    position: absolute;
+    bottom: 4px ;
+    left: 4px;
+    background-color: lightgrey;
+    height: 121px;                     /*Total de 242*/
+    width: 192px ;
+}
+section#random > div#img1{
+    display: none;
+    position: absolute;
+    top: 30px;
+    left: -130px;
+    background-color:var(--cor02);
+    height: 200px;
+    width: 3765px;
+
+    animation: none;
+
+}
+section#random > div#img1 > div{   /*Toda div dentro da div#img1*/
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.personagens{
+    display: inline-block;
+    box-sizing: border-box;
+
+    width: 185px;
+    height: 200px;
+
+    margin: 0px 10px 0px 10px;
+
+}
+/*-------------------------------------------Botões--------------------------------------------------*/
+div#roletar{
+    margin: 20px 0px;
+
+    text-align: center;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+div#roletar>input{
+    width: 100px;
+    height: 50px;
+    background-color: var(--cor02);
+
+    font-weight: bold;
+    font-size: 1.1em;
+
+    color: white;
+
+    border: #FF4666 solid 1px;
+}
+div#velocidade{
+    margin: 10px 0px;
+    padding: 10px 0px;
+
+    color: white;
+    text-align: center;
+}
+div#velocidade > label{
+    font-size: 1.1em;
+    font-weight: bold;
+
+    margin-right: 2px;
+}
+div#velocidade > select{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*----------------------------------Animações---------------------------------*/
+@keyframes random {
+    0%{
+        width: 200px;
+        height: 250px;
+
+        border-radius: 0px;
+    }
+    10%{
+        width: 360px;
+        height: 260px;
+
+        border-radius: 5px;
+    }
+    100%{
+        width: 360px;
+        height: 260px;
+
+        border-radius: 5px;
+    }
+}
+@keyframes imginicial{         /*Acho q da para melhorar*/
+    0%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(-130px);
+    }
+}
+@keyframes imginicial2 {
+    0%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(130px);
+    }
+}
+@keyframes img1{
+    0%{
+        
+        transform: translateX(0px);
+    }
+    100%{
+
+        transform: translateX(-3140px);
+    }
+}
+@keyframes resultado{
+    0%{
+        box-shadow: 0px 0px 30px rgba(255, 0, 0, 0.664);
+    }
+    50%{
+        box-shadow: 0px 0px 0px rgba(255, 0, 0, 0.664);
+    }
+    100%{
+        box-shadow: 0px 0px 30px rgba(255, 0, 0, 0.664);
+    }
+}

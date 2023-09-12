@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Valorant</title>
+    <link rel="stylesheet" href="estilos/mobile.css">
+    <link rel="stylesheet" href="estilos/telas.css">
+</head>
+<body>
+    <header>
+        <h1>Random Valorant</h1>
+        <p>&#169 Merin</p>
+    </header>
+    <main>
+        <p>Escolha seu Personagem Aleatoriamente!</p>
+        <!---------------------------------Resultado da roleta------------------------------------------------->
+        <section id="resultado">
+            <div id="img_r"></div>
+            <div id="text_r">Viper</div>
+        </section>
+        <!---------------------------------------Roleta-------------------------------------------------------->
+        <section id="random">
+            <div id="imginicial"></div>
+            <div id="imginicial2"></div>
+            <div id="seta_baixo"></div>
+            <div id="seta_cima"></div>
+            <div id="img1">
+                <div class="personagens" id="c1"></div>
+                <div class="personagens" id="c2"></div>
+                <div class="personagens" id="c3"></div>
+                <div class="personagens" id="c4"></div>
+                <div class="personagens" id="c5"></div>
+                <div class="personagens" id="c6"></div>
+                <div class="personagens" id="c7"></div>
+                <div class="personagens" id="c8"></div>
+                <div class="personagens" id="c9"></div>
+                <div class="personagens" id="c10"></div>
+                <div class="personagens" id="c11"></div>
+                <div class="personagens" id="c12"></div>
+                <div class="personagens" id="c13"></div>
+                <div class="personagens" id="c14"></div>
+                <div class="personagens" id="c15"></div>
+                <div class="personagens" id="c16"></div>
+  
+                <div class="personagens" id="selecionado"></div >
+
+                <div class="personagens" id="cfim"></div>
+            </div>
+        <!------------------------------------------Botões------------------------------------------------------>    
+        </section>
+        <div id="roletar">
+            <input type="button" value="Roletar" onclick="Roletar(),CaixaDePersonagem()">
+        </div>
+        <div id="velocidade">
+            <label for="ivelo">Velocidade :</label>
+            <select name="velo" id="ivelo">
+                <option value="Normal">1x</option>
+                <option value="Dobro">2x</option>
+                <option value="Nenhuma">Sem Animação</option>
+            </select>
+        </div>
+        <!--
+            <div id="tipopersonagem">
+            <label for="tp">Tipo de Personagem</label>
+            <input type="text" name="tp" id="itp">
+        </div>
+        -->
+    </main>
+
+    <script src="Roleta.js"></script>
+</body>
+</html>
